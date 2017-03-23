@@ -72,8 +72,21 @@ Solusi ini dibuat tanpa jaminan kesesuaian dengan solusi resmi dari juri olimpia
 
 \textit{Jawaban: D}\\
 
+Karena ketiganya dalam posisi garis lurus, maka jarak asteroid harus lebih besar dari panjang umbra bumi ($d_{\text{umbra}}$).
 
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.9\textwidth]{osk_01.png}
+\end{figure}
 
+Melalui prinsip kesebangunan,
+\begin{eqnarray*}
+\frac{R_{\text{sun}}}{1 + d_{\text{umbra}}} &=& \frac{R_{\text{earth}}}{d_{\text{umbra}}} \quad \text{atau}\\
+\frac{1 + d_{\text{umbra}}}{d_{\text{umbra}}} &=& \frac{R_{\text{sun}}}{R_{\text{earth}}}\\
+\frac{1}{d_{\text{umbra}}} + 1 &=& \frac{R_{\text{sun}}}{R_{\text{earth}}}\\
+\frac{1}{d_{\text{umbra}}} &=& \frac{R_{\text{sun}}}{R_{\text{earth}}} - 1 \\
+d_{\text{umbra}} &=& \frac{1}{\frac{R_{\text{sun}}}{R_{\text{earth}}} - 1} = 0.00925 \quad \text{sa} = 1,384 \times 10^{6} \quad \text{km}\\
+\end{eqnarray*}
 
 
 \question Di awal tahun 2012, telah diketahui sekitar 8000 asteroid dekat Bumi yang tersebar merata, terdiri dari 54\% tipe Apollo, 37\% tipe Amor, 8\% tipe Aten, dan 1\% jenis lain. Jika dilakukan dua kali pengamatan acak secara berturut-turut, peluang pengamat mendapati 1 asteroid tipe Amor dan 1 asteroid tipe Apollo
@@ -86,7 +99,7 @@ adalah
 \choice 0,09
 \end{choices}
 
-\textit{Jawaban: C}\\
+\textit{Jawaban: } C\\
 
 Pengamatan dilakukan secara berturutan, acak, serta tidak saling bergantung, sehingga:
 \begin{equation*}
@@ -94,10 +107,7 @@ P = P(\text{mendapati tipe Amor}) \times P(\text{mendapati tipe Apollo}) = 0,37 
 \end{equation*}
 
 
-\question Sinyal radar berfrekuensi 300 MHz ditembakkan ke permukaan Saturnus (diasumsikan sebagai bendapadat) yang memiliki radius 58000 km dan periode rotasi 10 jam 14 menit. Akibat rotasi Saturnus, sinyal
-radar pantulan yang kembali ke Bumi akan mengalami efek Doppler. Setelah dikoreksi dengan pengaruh
-gerak pengamat, perbedaan frekuensi pantulan yang diterima dari permukaan Saturnus terhadap frekuensi
-radar yang ditembakkan adalah
+\question Sinyal radar berfrekuensi 300 MHz ditembakkan ke permukaan Saturnus (diasumsikan sebagai benda padat) yang memiliki radius 58000 km dan periode rotasi 10 jam 14 menit. Akibat rotasi Saturnus, sinyal radar pantulan yang kembali ke Bumi akan mengalami efek Doppler. Setelah dikoreksi dengan pengaruh gerak pengamat, perbedaan frekuensi pantulan yang diterima dari permukaan Saturnus terhadap frekuensi radar yang ditembakkan adalah
 \begin{choices}
 \choice 19,8 MHz
 \choice 19,8 kHz
@@ -106,7 +116,29 @@ radar yang ditembakkan adalah
 \choice 9,9 Hz
 \end{choices}
 
-\textit{Jawaban: B}\\
+\textit{Jawaban: } B\\
+
+Ditembakkan ke sisi Saturnus yang mana? Jika ditembakkan tepat di arah sumbu rotasi/tengah, maka tidak akan ada efek Doppler akibat rotasi yang bisa terdeteksi. Kemungkinan yang dimaksud adalah ditembakkan diseluruh permukaan Saturnus dan yang dicari adalah perbedaan frekuensi `maksimum'. Perbedaan frekuensi yang terdeteksi akan maksimum ketika mengenai sisi ekuator dengan kecepatan radial paling besar, yakni kecepatan rotasi Saturnus itu sendiri.
+
+\begin{equation*}
+v = \frac{2 \pi R}{T} = \frac{2 \cdot \pi \cdot 58000}{36840} = 9,892 \quad \text{km/s}
+\end{equation*}
+
+Delta frekuensi yang akan terdeteksi dapat dihitung dengan persamaan efek Doppler:
+\begin{eqnarray*}
+\frac{\lambda - \lambda_0}{\lambda_0} &=& \frac{v_{\text{radial}}}{c} \quad \text{atau}\\
+\frac{f_0}{f} - 1 &=& \frac{v_{\text{radial}}}{c}
+\end{eqnarray*}
+
+Menurut pengamat di Saturnus, gelombang yang ia terima sudah mengalami pergesaran Doppler karena gerak relatif; tidak 300 MHz. Gelombang tersebut akan dipantulkan dengan frekuensi yang sama dengan yang ia terima (yang sudah mengalami efek Doppler). Lalu gelombang pantulan tersebut akan diterima pengamat di Bumi dengan pergeseran yang sama lagi. Sehingga, untuk menghitung pergeseran maksimum frekuensi radar, kecepatan relatifnya perlu dikalikan dua.
+
+\begin{eqnarray*}
+\frac{300 \times 10^6}{f} - 1 &=& \frac{2 \cdot 9,892}{3 \times 10^{5}}\\
+\frac{300 \times 10^6}{f} &=& 1,0000665466666667\\
+f &=& 299980037,32844925 \quad \text{Hz}\\
+\Delta f &=& f - f_0 = 300 \times 10^6 - 299999980,0360013 \\
+&=& 19962,67 \quad \text{Hz} = 19,96 \quad \text{kHz}\\
+\end{eqnarray*}
 
 
 \question Sebuah satelit mengorbit planet Mars. Ketinggian satelit ini diatur sehingga periode orbitnya sama dengan periode rotasi Mars. Ketinggian satelit tersebut dari permukaan Mars adalah
@@ -118,7 +150,7 @@ radar yang ditembakkan adalah
 \choice 42959 km
 \end{choices}
 
-\textit{Jawaban: A}\\
+\textit{Jawaban: } A\\
 
 Dengan menganggap orbit satelit adalah lingkaran dan $m_{sat} \ll M_{mars}$, dapat diperoleh bentuk hukum Kepler III,
 
@@ -130,9 +162,8 @@ r &=& 20426,5\quad \text{km}
 \end{eqnarray*}
 \begin{eqnarray*}
 r &=& R_{mars} + h\\
-h &=& r - R_{mars} = 17029 \quad \text{km}  
+h &=& r - R_{mars} = 17029 \quad \text{km} \\
 \end{eqnarray*}
-
 
 
 \question Sebuah misi pendaratan di Mars memiliki tujuan untuk mengambil sampel batuan dengan bantuan dua buah alat. Alat pertama bisa mengambil 2 kg batuan A dan 3 kg batuan B dengan energi 200 J sekali jalan. Alat kedua bisa mengambil 3 kg batuan A dan 1 kg batuan B dengan energi 75 J sekali jalan. Jika roket untuk misi tersebut bisa mengangkut batuan sampai 90 kg batuan A dan 100 kg batuan B, dan energi yang sanggup disediakan untuk kedua alat tersebut adalah 7000 J. Jumlah batuan terbanyak yang dapat diangkut oleh kedua alat tersebut terdiri dari
@@ -144,7 +175,7 @@ h &=& r - R_{mars} = 17029 \quad \text{km}
 \choice 30 kg batuan A dan 90 kg batuan B
 \end{choices}
 
-\textit{Jawaban: A}\\
+\textit{Jawaban: } A\\
 
 Fungsi yang ingin dimaksimalkan:
 $$m_A + m_B = (2N_1 + 3N_2) + (3N_1 + 1 N_2)$$
@@ -162,7 +193,17 @@ N_1 &=& \text{jumlah pengangkutan menggunakan alat 1}\\
 N_2 &=& \text{jumlah pengangkutan menggunakan alat 2}
 \end{eqnarray*}
 
-Jumlah batuan maksimum dicapai apabila $N_1 = 30$ dan $N_2 = 10$, atau $m_A = 90$ kg dan $m_B = 100$ kg dengan energi total yang dibutuhkan adalah $6750$ Joule.
+Dari 3 syarat batas tersebut dapat kita cari persamaan $N_2$ sebagai fungsi $N_1$ yang kemudian dapat kita gunakan untuk mencari daerah di mana ketiganya terpenuhi. 
+
+\begin{itemize}
+\item Garis merah $\Rightarrow N_2 = 30 - \frac{2}{3} N_1$
+\item Garis biru $\Rightarrow N_2 = 100 - 3 N_1$
+\item Garis hitam $\Rightarrow N_2 = \frac{7000 - 200 N_1}{75}$
+\end{itemize}
+
+Daerah yang diarsir kuning merupakan daerah yang memenuhi ketiga syarat batas tersebut. Pada daerah tersebut akan terdapat kombinasi $N_1$ dan $N_2$ yang memaksimalkan fungsi tujuan (\textit{objective function}), yaitu jumlah batuan. 
+
+Jumlah batuan ($m_A + m_B$) maksimum dapat dicari dengan menilik titik-titik perpotongan dan memasukkannya ke dalam fungsi tujuannya. Terdapat tiga titik ($N_1$, $N_2$), yaitu (0, 30), (30, 10), dan (33, 0). Nilai jumlah batuan maksimum dicapai apabila $N_1 = 30$ dan $N_2 = 10$, atau $m_A = 90$ kg dan $m_B = 100$ kg dengan energi total yang dibutuhkan adalah $6750$ Joule.
 
 \begin{figure}[!ht]
 \centering
@@ -178,7 +219,23 @@ Jumlah batuan maksimum dicapai apabila $N_1 = 30$ dan $N_2 = 10$, atau $m_A = 90
 \choice 7,54 ms$^{-2}$
 \end{choices}
 
-\textit{Jawaban: } C\\
+\textit{Jawaban: } tidak ada jawaban\\
+
+Percepatan gravitasi di puncak gunung dapat dihitung,
+\begin{eqnarray*}
+g &=& \frac{GM}{r^2}\\
+&=& \frac{6,67 \times 10^{-11} \cdot 2,5 \times 10^{23}}{3800000^2}\\
+&=& 1,155 \quad \text{m/s}^2
+\end{eqnarray*}
+Kecepatan maksimum yang dimaksud di dalam soal adalah kecepatan bola terbesar yang dapat dicapai sesaat sebelum tali putus. Dengan memperhatikan arah gaya yang diterima bola, maka kecepatan terbesar dapat dicapai apabila bola berada di titik tertinggi lingkaran vertikal, sehingga,
+\begin{eqnarray*}
+T &=& T_{maks}\\
+F_{\text{sentrifugal}} - mg &=& T_{maks}\\
+m \frac{v^2}{r} - mg &=& T_{maks}\\
+m (\frac{v^2}{r} - g) &=& T_{maks}\\
+0,6 (\frac{v^2}{1} - 1.155) &=& 30\\
+v &=& 7,152 \quad \text{m/s}\\
+\end{eqnarray*}
 
 
 \question Sebuah panel surya dengan efisiensi 20\% dan luas 10 m$^2$ terpapar sinar Matahari selama 1 menit. Daya yang dihasilkan panel surya seluruhnya akan digunakan untuk menyalakan beberapa lampu dengan masing-masing lampu memiliki daya 5 Watt. Jika diasumsikan bahwa foton yang tiba pada panel surya tidak mengalami absorpsi oleh materi di Tata Surya maupun oleh atmosfer Bumi, dan tidak ada daya yang hilang dari panel surya ke lampu, maka jumlah lampu 5 Watt yang dapat ditenagai oleh panel surya tersebut adalah
@@ -212,12 +269,13 @@ Jika lampu 5 Watt tadi hanya perlu dinyalakan selama 1 detik, maka energi sebesa
 \choice 8,4
 \end{choices}
 
-\textit{Jawaban: } D\\
+\textit{Jawaban: } D
+
 \begin{eqnarray*}
-m_A - m_B &=& -2,5 \log{\frac{F_A}{F_B}} = -2,5 \log{\frac{\frac{L_A}{4\pi d_A^2}}{\frac{L_B}{4 \pi d_B^2}}} = -2,5 \log{\frac{L_A}{L_B} \frac{d_B^2}{d_A^2}}\\
+m_A - m_B &=& -2,5 \log{\frac{F_A}{F_B}} = -2,5 \log{\frac{\frac{L_A}{4\pi d_A^2}}{\frac{L_B}{4 \pi d_B^2}}} = -2,5 \log{\left(\frac{L_A}{L_B} \frac{d_B^2}{d_A^2}\right)}\\
 m_B &=& -0.653\\
-\frac{m_A}{m_B} &=& -10,72 
-\end{eqnarray*}\\
+\frac{m_A}{m_B} &=& -10,72\\ 
+\end{eqnarray*}
 
 
 \question Sebuah kereta maglev (\textit{magnetic levitation train}) bermassa 70 ton digunakan untuk transportasi koloni di Mars sepanjang Amazonis Planitia yang terbentang sekitar 1183 km. Jika percepatan gravitasi Mars $g_{Mars} = 3,73$ m s$^{-2}$, arus yang digunakan sebesar 700000 Ampere, maka kuat medan magnet minimum yang diperlukan agar kereta tersebut tetap terapung sepanjang perjalanan adalah
@@ -229,7 +287,7 @@ m_B &=& -0.653\\
 \choice $7,48 \times 10^{-9}$ T
 \end{choices}
 
-\textit{Jawaban: } tidak ada jawaban yang benar\\
+\textit{Jawaban: } tidak ada jawaban yang benar; walaupun tidak masuk akal, dengan berbesar hati pilihlah C sebagai jawaban.\\
 
 Kuat medan magnet ($B$) minimum agar kereta tetap mengapung dapat dicari dengan menyamakan besarnya gaya magnetik dengan berat kereta.
 
@@ -240,7 +298,6 @@ B &=&3,153 \times 10^{-7} \quad \text{T} \quad (\text{untuk L adalah panjang rel
 \end{eqnarray*}
 
 Masalahnya, untuk pendekatan sederhana ini $L$ seharusnya adalah panjang kereta, bukan panjang rel.\\
-
 
 
 \question Suatu eksperimen dilakukan dengan menjemur panel logam seluas 1 m$^2$ selama waktu tertentu dan mengukur suhu logam sebelum dan sesudah penjemuran. Eksperimen ini dilakukan untuk menghitung fluks Matahari yang sampai ke Bumi. Jika panel logam tersebut bermassa 1 kg dengan kalor jenis logam 0,2 kal/(gr $^{\circ}$C) dan suhu awal 30 $^{\circ}$C, suhu akhir logam setelah dijemur selama 10 detik adalah
@@ -281,6 +338,18 @@ T &=& 46,3 ~^{\circ}\text{C}
 
 \textit{Jawaban: A}\\
 
+Panjang fokus objektif dapat dicari dari \textit{focal ratio} dan diameter,
+\begin{eqnarray*}
+f_{ratio} &=& \frac{F_{ob}}{D_{ob}}\\
+9,75 &=& \frac{F_{ob}}{20}\\
+F_{ob} &=& 195 \quad \text{cm}
+\end{eqnarray*}
+
+Panjang minimum teleskop tipe refraktor sederhananya dapat dicari dengan $L = F_{ob} + F_{ok} = 195 + 2.5 = 197.5$ cm.\\
+
+Perbesaran teleskop ($M$) dapat dihitung, $\frac{F_{ob}}{F_{ok}} = \frac{195}{2.5} = 78 $ kali.
+
+Pernyataan 2 dan 3 benar, sehingga bijaknya 1 juga benar. :D\\
 
 
 \question Jupiter memiliki jejari 70000 km dan mengorbit Matahari pada radius 5,2 sa. Dari sebuah asteroid yang berjarak 4,2 sa dari Matahari, seorang pengamat ingin mengamati seluruh permukaan Jupiter yang sedang dalam keadaan oposisi. Jika pengamat tersebut menggunakan refraktor dengan panjang fokus objektif 11 meter dan medan pandang semu eyepiece sebesar 45$^{\circ}$, maka panjang fokus eyepiece yang memadai agar seluruh permukaan Jupiter teramati adalah
@@ -291,7 +360,22 @@ T &=& 46,3 ~^{\circ}\text{C}
 \item 9 mm
 \end{enumerate}
 
-\textit{Jawaban: A}\\
+\textit{Jawaban: } A\\
+
+Bagi pengamat di asteroid, Jupiter sedang mengalami oposisi, artinya Jupiter berada di arah yang berlawanan dengan arah Matahari. Jarak Jupiter dari asteroid saat itu adalah 5,2 - 4,2 = 1 satuan astronomi.
+
+Diameter sudut Jupiter dilihat oleh pengamat di asteroid:
+\begin{equation*}
+\delta = \frac{D}{d} = \frac{140000}{1,496 \times 10^{8}} = 0.0009358 \quad \text{rad} = 0.0536^{\circ}
+\end{equation*}
+ 
+Medan pandang (\textit{field of view}) teleskop dapat dicari dengan:
+\begin{equation*}
+\textit{fov} = \frac{45^{\circ}}{M} \quad \text{dengan} \quad M = \frac{F_{ob}}{F_{ok}}
+\end{equation*} 
+
+Untuk panjang fokus objektif ($F_{ob}$) 11 m, dapat dihitung \textit{fov} untuk tiap eyepiece, yaitu secara berurutan: $0.102^{\circ}$, $0.082^{\circ}$, $0.061^{\circ}$, $0.037^{\circ}$. Sehingga eyepiece yang dapat dipasangkan ke teleskop agar Jupiter tampak utuh adalah eyepiece 1, 2, atau 3; karena nilai \textit{fov}-nya lebih besar dibanding diameter sudut Jupiter dilihat dari asteroid.\\
+
 
 
 
@@ -313,6 +397,7 @@ Observed from north ecliptic pole, lunar motion around the Earth is in the same 
 
 \textit{Jawaban: } C\\
 
+Periode sinodis Bulan (dari satu fase kembali ke fase yang sama) sebesar 29,5 hari, sedikit lebih panjang dibanding periode siderisnya mengelilingi Bumi sebesar $27\frac{1}{3}$ hari. Hal ini terjadi karena gerak revolusi Bulan mengelilingi Bumi searah dengan gerak revolusi Bumi mengelilingi Matahari, yaitu berlawanan arah jarum jam (\textit{counter clockwise}) jika dilihat dari atas Kutub Utara Ekliptika.\\
 
 
 \question Nilai sudut jam akan sama untuk pengamat pada bujur yang sama, namun tidak demikian dengan ketinggian objek yang berbeda-beda bagi pengamat di tiap-tiap bujur.
@@ -321,7 +406,11 @@ SEBAB
 \end{center}
 Menentukan nilai sudut jam dihitung ketika objek berada di kulminasi atas dengan nilai 0 jam kemudian menuju ke barat (dengan nilai 6 jam), lalu ke posisi kulminasi bawah (dengan nilai 12 jam) dan kemudian ke arah barat dengan nilai -6 jam.\\
 
-\textit{Jawaban: } A\\
+\textit{Jawaban: } C, atau mungkin A maksudnya\\
+
+Nilai sudut jam suatu bintang (objek jauh) akan sama jika dilihat dari bujur yang sama. Ketinggian bintang bisa jadi berbeda apabila lintang pengamat berbeda (walaupun bujurnya sama).
+
+Pertanyaan kedua agak ambigu mengenai penyebutan arah Barat dan Timurnya. Sudut jam di ukur dari kulminasi atas ke arah Barat, bernilai 6 jam ketika proyeksi benda tersebut di ekuator langit tepat ada di titik Barat (begitu seterusnya); bendanya bisa jadi tidak akan melewati tepat titik Barat apabila deklinasinya tidak nol. Bagian terakhir seharusnya ke arah Timur yang bernilai -6 jam.\\
 
 
 \question Seorang astronom mengadakan suatu eksperimen identik pada sebuah bandul di Bumi dan Bulan. Ayunan bandul tersebut akan lebih cepat saat diayunkan di Bulan daripada saat diayunkan di Bumi.
@@ -352,9 +441,9 @@ Komet Halley memang memiliki orbit retrograde, artinya arah gerak orbitnya berla
 Sumber komet periode pendek ($T < 200$ tahun) adalah sabuk Kuiper.\\
 
 \vspace{0.5cm}
-\textbf{ISIAN SINGKAT}
+\textbf{ISIAN SINGKAT (10 POIN PER SOAL)}
 
-\question [10] Sebuah sistem keplanetan di luar Tata Surya memiliki sembilan buah planet. Jarak planet-planet tersebut ke bintang induk mengikuti sebuah pola barisan geometri. Jika jarak planet pertama adalah 0,4 sa dan jarak planet kesembilan adalah 102,4 sa, maka jarak planet kelima dari bintang induknya adalah \ldots\ldots\ldots sa.
+\question Sebuah sistem keplanetan di luar Tata Surya memiliki sembilan buah planet. Jarak planet-planet tersebut ke bintang induk mengikuti sebuah pola barisan geometri. Jika jarak planet pertama adalah 0,4 sa dan jarak planet kesembilan adalah 102,4 sa, maka jarak planet kelima dari bintang induknya adalah \ldots\ldots\ldots sa.
 
 \textit{Jawaban: } 6,4\\
 
@@ -378,7 +467,7 @@ Setelah memperoleh $a = 0,4$ dan $r = 2$, jarak planet kelima dapat dicari,
 a_5 = 0,4 \cdot 2^{5-1} = 6,4
 \end{equation*}
 
-\question [10] Suatu \textit{Active Galactic Nuclei} (AGN) memancarkan foton dengan energi sebesar 2 keV. Maka, foton tersebut termasuk ke dalam rentang gelombang elektromagnetik yang bernama \ldots\ldots\ldots
+\question Suatu \textit{Active Galactic Nuclei} (AGN) memancarkan foton dengan energi sebesar 2 keV. Maka, foton tersebut termasuk ke dalam rentang gelombang elektromagnetik yang bernama \ldots\ldots\ldots
 
 \textit{Jawaban: } Sinar-X\\
 
@@ -390,17 +479,13 @@ Untuk foton dengan energi 2 keV = $3,2 \times 10^{-16}$ Joule, frekuensinya adal
 
 Lupakan hal di atas.. patokan sederhananya, jika foton memiliki energi dalam rentang kilo electron-Volt (keV) biasanya masuk dalam kategori sinar-X, sedangkan jika berada pada rentang Mega electron-Volt (MeV) masuk dalam kategori sinar-$\gamma$.
 
-Data lebih akurat dari Wikipedia:\\
-- sinar-$x \Rightarrow 100$ eV \--- 100 keV
+Data lebih akurat dari Wikipedia:
+\begin{itemize}
+\item sinar-$x \Rightarrow 100$ eV \--- 100 keV
+\item sinar-$\gamma \Rightarrow ~> 100$ keV\\
+\end{itemize} 
 
-- sinar-$\gamma \Rightarrow ~> 100$ keV\\
-
-
-
-
-
-
-\question [10] Jika periode orbit sideris Saturnus adalah 29,5 tahun, maka periode sinodis Saturnus dilihat dari Bumi adalah \ldots\ldots\ldots tahun
+\question Jika periode orbit sideris Saturnus adalah 29,5 tahun, maka periode sinodis Saturnus dilihat dari Bumi adalah \ldots\ldots\ldots tahun
 
 \textit{Jawaban: } 1,035 tahun\\
 
@@ -416,7 +501,7 @@ T_{sino} &=& 1,035 \quad \text{tahun}
 \end{eqnarray*}\\
 
 
-\question [10] Berikut adalah tabel distribusi jarak bintang dari Matahari untuk bintang kelas spektrum G.
+\question Berikut adalah tabel distribusi jarak bintang dari Matahari untuk bintang kelas spektrum G.
 
 
 \begin{center}
@@ -461,8 +546,13 @@ Jumlah & & 133 & 4521,65\\
 \end{tabular} 
 \end{center}
 
-Rata-ratanya adalah $\frac{\sum_i f_i \cdot x_i}{\sum_i f_i} = 34$
+Rata-ratanya adalah $\frac{\sum_i f_i \cdot x_i}{\sum_i f_i} = \frac{4521,65}{133} \approx 34$
 
 \end{questions}
 
+
+\vspace{5cm}
+\begin{flushright}
+Solusi ini dapat diperoleh di \url{http://ridlow.wordpress.com}
+\end{flushright}
 \end{document}
